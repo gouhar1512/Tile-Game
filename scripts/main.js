@@ -10,7 +10,6 @@ var sc = 0;
 var activeMoveDown;
 var activeMoveRest;
 var activeRemoveBlock;
-
 startStop.onclick = function() {
   if (this.innerText == "Start") {
     this.innerText = "Restart";
