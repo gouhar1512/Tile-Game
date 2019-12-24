@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.92, maximum-scale=1.0, user-scalable=0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Tiles Game</title>
+      <link rel="stylesheet" href="styles/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class = "gameArea">
+            <table border="1" id="canvas" cellspacing="0" border="0" cellpadding="0"></table>
+            <div class="restart">
+               Do you want to restart<br>
+               <button onclick="window.location.reload()">Yes</button>
+               <button onclick="cancelRestart()">No</button>
+            </div>
+         </div>
+         <div class = "details">
+            <div class = "next_block">
+               <span class = "nbTitle">Next Block</span>
+               <table id = "nextBlock">
+                  <tr>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                  </tr>
+               </table>
+            </div>
+            <div class="score_title">
+               <div class = "scTitle">Score</div>
+               <div id = "score">
+                  0
+               </div>
+            </div>
+            <div class="controls">
+               <i class="fa fa-angle-up" onclick="interChangeColors()"></i><br>
+               <i class="fa fa-angle-left" onclick="moveLeft()"></i>
+               <i class="fa fa-angle-down" onclick="moveDownFast()"></i>
+               <i class="fa fa-angle-right" onclick="moveRight()"></i>
+            </div>
+         </div>
+         <div class="buttons">
+            <div id = "startStop">Start</div>
+            <div id = "playPause">Pause</div>
+         </div>
+      </div>
+      <script src="scripts/constants.js"></script>
+      <script src="scripts/block.js"></script>
+      <script src="scripts/movement.js"></script>
+      <script src="scripts/cell-functions.js"></script>
+      <script src="scripts/main.js"></script>
+   </body>
+</html>
